@@ -15,7 +15,6 @@ class Game2048
 private:
     bool gameOver;
     bool change = true;        // this variable to check if the board has changed after GetDirection
-    vector<vector<int>, 4> board;
     int board[4][4];
     int score;
     Direction dir;
@@ -328,7 +327,7 @@ public:
                     cout << "----" << " ";
                 else if(board[i][j] < 10)
                     cout << "--" << board[i][j] << "-" << " ";
-                else if(board[i][j] << 100)
+                else if(board[i][j] < 100)
                     cout << "-" << board[i][j] << "-" << " ";
                 else if(board[i][j] < 1000)
                     cout << "-" << board[i][j] << " ";
